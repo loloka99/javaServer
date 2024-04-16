@@ -11,4 +11,4 @@ jobs:
       - name: Run JAR file  # Lépés neve
         run: |  # A futtatandó parancsok
           java -jar yourJarFile.jar  # JAR fájl futtatása
-          timeout 3600  # Egy órás időkorlát
+          timeout 600  # Egy órás időkorlát
