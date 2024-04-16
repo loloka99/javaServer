@@ -1,0 +1,14 @@
+name: Run JAR File
+
+on:
+  workflow_dispatch:  # Esemény, ami elindítja a munkafolyamatot (manuális indítás)
+
+jobs:
+  run-jar:  # A munkafolyamat neve
+    runs-on: ubuntu-latest  # A futtatási környezet (pl. Ubuntu)
+    steps:
+      - uses: actions/checkout@v3  # A kódtár klonozása
+      - name: Run JAR file  # Lépés neve
+        run: |  # A futtatandó parancsok
+          java -jar yourJarFile.jar  # JAR fájl futtatása
+          timeout 3600  # Egy órás időkorlát
